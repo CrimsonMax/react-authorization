@@ -5,7 +5,7 @@ import { Login } from "../pages/Login";
 import { privateRoute, publicRoute, RouteNames } from "../routes";
 
 export const AppRouter = () => {
-  const auth = true
+  const auth = false
 
   return (
     auth

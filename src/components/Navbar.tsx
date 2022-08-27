@@ -1,17 +1,17 @@
 import { Layout, Menu, Row } from "antd";
 import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTypedSelector } from "../hooks/useTypedSelector";
 import { RouteNames } from "../routes";
 
 export const Navbar: FC = () => {
   const router = useNavigate()
-
-  const auth = true
+  const {isAuth} = useTypedSelector(state => state.auth)
 
   return (
     <Layout.Header>
       <Row style={{ flexDirection: 'row-reverse' }} >
-        {auth
+        {isAuth
           ?
           <>
             <Menu
